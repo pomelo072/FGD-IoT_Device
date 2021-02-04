@@ -1,4 +1,6 @@
 import network
+import machine
+import ntptime
 
 
 def do_connect(essid, password):
@@ -11,3 +13,7 @@ def do_connect(essid, password):
             pass
     print("WIFI connected.")
     print('network config:', sta_if.ifconfig())
+
+    ntptime.settime()
+    rtc = machine.RTC()
+    print(rtc.datetime())
