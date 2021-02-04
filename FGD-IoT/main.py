@@ -1,0 +1,3 @@
+import FGDMain
+
+FGDMain.main()
