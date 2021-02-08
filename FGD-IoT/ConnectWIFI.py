@@ -1,6 +1,5 @@
 import network
 import machine
-import ntptime
 import SensorController
 
 
@@ -15,6 +14,5 @@ def do_connect(essid, password):
     SensorController.Display_LCD1602("WIFI connected.", 1)
     SensorController.Display_LCD1602('network config\n' + sta_if.ifconfig()[0], 2)
 
-    ntptime.settime()
 
 
