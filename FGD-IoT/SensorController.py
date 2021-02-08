@@ -35,11 +35,11 @@ def Display_LCD1602(word, t):
 
 def SensorController():
     t, h = Sensor_DHT11()
-    gz = Sensor_GY3o2()
+    lx = Sensor_GY3o2()
     solid_humidity = Sensor_YL69()
-    SensorData = {"temperature": t, "humidity": h, "Light intensity": gz, "solid_humidity": solid_humidity}
+    SensorData = [1, t, h,  lx, solid_humidity]
     first_msg = "temperature:" + str(t) + "\nhumidity:" + str(h) + "%"
-    second_msg = "Light intensity\n" + str(gz) + " lx"
+    second_msg = "Light intensity\n" + str(lx) + " lx"
     third_msg = "solid_humidity\n" + str(solid_humidity)
     Display_LCD1602(first_msg, 2)
     Display_LCD1602(second_msg, 2)
