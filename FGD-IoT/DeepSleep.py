@@ -1,7 +1,7 @@
 import machine
 
 
-def DeepSleep(time):
+def deepsleep(time):
     rtc = machine.RTC()
     rtc.irq(trigger=rtc.ALARM0, wake=machine.DEEPSLEEP)
 
